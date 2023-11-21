@@ -25,10 +25,17 @@ header{
     text-decoration: none;
 }
 
-.input-field{
-    display: grid;
-    grid-template-columns: 10% auto 20%;
-    grid-gap: 10px;
-    text-align: center;
-    }
+.seach_bar{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center ;
+}
+
+.containner{
+    width: 750px;
+    height: 620px;
+    background-color: beige;
+}
     
