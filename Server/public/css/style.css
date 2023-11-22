@@ -10,6 +10,18 @@
 
 }
 
+
+#search_button{
+
+	font-size: 30px;
+	padding-left: 30px;
+	color:white;
+	background-color: orangered;
+	border: none;
+	
+
+}
+
 #LoginIcon{
 
 	padding-bottom: 20px;
@@ -20,6 +32,8 @@
 
 #nameholder{
 
+
+	margin-right: 20px;
 	font-size: 40px;
 	padding-left: 30px;
 	color: white;
