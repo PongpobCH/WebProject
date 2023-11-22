@@ -36,9 +36,9 @@ const imageFilter = (req, file, cb) => {
 // ใส่ค่าตามที่เราตั้งไว้ใน mysql
 const con = mysql.createConnection({
     host: "localhost",
-    user: "pongpob",
-    password: "q]Z0enyEAjsDmCKm",
-    database: "mydb"
+    user: "root",
+    password: "",
+    database: "dbwebproject"
 });
 
 con.connect((err) => {
@@ -103,27 +103,27 @@ app.post("/profilepic", async (req, res) => {
     return res.redirect("login.html");
   });
   
- //ทำให้สมบูรณ์
-app.get("/readPost", async (req, res) => {
-    let sql =
-      "CREATE TABLE IF NOT EXISTS userPost (username VARCHAR(255), post VARCHAR(500))";
-    let result = await queryDB(sql);
-    sql = `SELECT post, username FROM userPost`;
-    result = await queryDB(sql);
-    result = Object.assign({}, result);
-    console.log(result);
-    res.json(result);
-  });
+//  //ทำให้สมบูรณ์
+// app.get("/readPost", async (req, res) => {
+//     let sql =
+//       "CREATE TABLE IF NOT EXISTS userPost (username VARCHAR(255), post VARCHAR(500))";
+//     let result = await queryDB(sql);
+//     sql = `SELECT post, username FROM userPost`;
+//     result = await queryDB(sql);
+//     result = Object.assign({}, result);
+//     console.log(result);
+//     res.json(result);
+//   });
   
  //ทำให้สมบูรณ์
-app.post("/writePost", async (req, res) => {
-    let sql =
-    "CREATE TABLE IF NOT EXISTS userPost (username VARCHAR(255), post VARCHAR(500))";
-  let result = await queryDB(sql);
-  sql = `INSERT INTO userPost (username,post) VALUES ("${req.body.user}", "${req.body.message}")`;
-  result = await queryDB(sql);
-  res.redirect("feed.html");
-});
+// app.post("/writePost", async (req, res) => {
+//     let sql =
+//     "CREATE TABLE IF NOT EXISTS userPost (username VARCHAR(255), post VARCHAR(500))";
+//   let result = await queryDB(sql);
+//   sql = `INSERT INTO userPost (username,post) VALUES ("${req.body.user}", "${req.body.message}")`;
+//   result = await queryDB(sql);
+//   res.redirect("feed.html");
+// });
   
 //ทำให้สมบูรณ์
 app.post("/checkLogin", async (req, res) => {
