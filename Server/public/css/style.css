@@ -1,0 +1,85 @@
+
+#container{
+	
+	padding-top: 100px;
+	padding-right: 30px;
+	
+	float: right;
+	
+	
+
+}
+
+
+#search_button{
+
+	font-size: 30px;
+	padding-left: 30px;
+	color:white;
+	background-color: orangered;
+	border: none;
+	
+
+}
+
+#LoginIcon{
+
+	padding-bottom: 20px;
+	padding-left: 350px;	
+	font-size: 72px;
+
+}
+
+#nameholder{
+
+
+	margin-right: 20px;
+	font-size: 40px;
+	padding-left: 30px;
+	color: white;
+	padding-top: 30px;
+
+}
+#header{
+	
+
+	margin-top: -10px;
+	margin-right: -20px;
+	margin-left: -20px;
+	font-size: 20px;
+	color: orangered;
+	
+	background-color: orangered;
+
+
+}
+
+
+	
+.form{
+	
+	color: white;
+	font-size:  36px;
+	
+}
+
+.form input{
+
+	padding-left: 10px;
+	margin-right: 100px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-size: 36px;
+
+}
+
+#errordisplay{
+	/*margin-top: -20px;*/
+	font-size:12px;
+	color: #EE0019;
+}
+
+body{
+	background-color: rgb(30, 27, 27);
+}
+
