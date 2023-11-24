@@ -3,17 +3,14 @@
 	
 	padding-top: 100px;
 	padding-right: 30px;
-<<<<<<< HEAD
+
 	
 	float: right;
 	
 	
 
 }
-=======
-	float: right;
 
-}
 #container2{
 
 	margin-top: 30px;
@@ -26,7 +23,7 @@
 	font-size: 30px;
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
->>>>>>> WorkinProgress
+
 
 
 #search_button{
@@ -58,10 +55,8 @@
 	padding-top: 30px;
 
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> WorkinProgress
+
 #header{
 	
 
@@ -95,8 +90,6 @@
 
 }
 
-<<<<<<< HEAD
-=======
 .form2{
 	
 	color: white;
@@ -118,7 +111,7 @@
 }
 
 
->>>>>>> WorkinProgress
+
 #errordisplay{
 	/*margin-top: -20px;*/
 	font-size:12px;
@@ -129,8 +122,6 @@ body{
 	background-color: rgb(30, 27, 27);
 }
 
-<<<<<<< HEAD
-=======
 
 #button-confirm {
 
@@ -182,4 +173,4 @@ body{
 
   
 
->>>>>>> WorkinProgress
+
