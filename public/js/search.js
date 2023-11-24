@@ -1,50 +1,73 @@
-//โชว์ลิสต์งานในหน้าเพจ
-// window.onload = pageLoad;
+// Function to fetch data from the JSON file
+function fetchData(callback) {
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", "js/data_job.json");
+  xhr.onload = function () {
+      if (xhr.status === 200) {
+          var jsonData = JSON.parse(xhr.responseText);
+          callback(jsonData);
+      } else {
+          console.error("Failed to fetch data");
+      }
+  };
+  xhr.onerror = function () {
+      console.error("Error during the XMLHttpRequest");
+  };
+  xhr.send();
+}
 
-// function pageLoad(){
-// 	var xhr = new XMLHttpRequest();
-//   xhr.open("GET","js/data_job.json");
-//   xhr.onload = function(){
-//     var jsdata = JSON.parse(xhr.responseText);
-//     console.log(jsdata);
-//     showData(jsdata);
-//   };
-//   xhr.onerror = function(){alert("ERROR!");};
-//   xhr.send();
-// }
+// Function to display data on the page
+function showData(data) {
+  var layer = document.getElementById("layer");
+  layer.innerHTML = ""; // Clear previous data
 
-// function showData(data){
-//     var keys = Object.keys(data);
-//     for(var i =0; i< keys.length; i++){
-//         var temp = document.getElementById("layer");
-//         var list = temp.querySelectorAll("div");
-  
-//         var jobName = document.createElement("p");
-//         jobName.innerText = data[keys[i]].jobName;
-        
-//         var contractor = document.createElement("p");
-//         contractor.innerText = data[keys[i]].contractor;
+  for (var id in data) {
+      var jobData = data[id];
 
-//         var earth = document.createElement("p");
-//         earth.innerText = data[keys[i]].earth;
-  
-//         var pay = document.createElement("p");
-//         pay.innerText = data[keys[i]].pay;
+      var jobContainer = document.createElement("div");
 
-//          var earth = document.createElement("p");
-//         earth.innerText = data[keys[i]].earth;
-  
-  
-        
-        
-//         list[i].appendChild(jobName);
-//         list[i].appendChild(contractor);
-//         list[i].appendChild(earth);
-//         list[i].appendChild(pay);
-//         list[i].appendChild(details);
-       
-//     }
-//   }
+      var jobName = document.createElement("p");
+      jobName.innerText = "Job: " + jobData.jobName;
 
-  fetch("data_job.json").then(res => res.json()).then(data => {})
+      var contractor = document.createElement("p");
+      contractor.innerText = "Contractor: " + jobData.contractor;
 
+      var earth = document.createElement("p");
+      earth.innerText = "From: " + jobData.earth;
+
+      var pay = document.createElement("p");
+      pay.innerText = "Pay: " + jobData.pay;
+
+      var details = document.createElement("p");
+      details.innerText = "Details: " + jobData.details;
+
+      jobContainer.appendChild(jobName);
+      jobContainer.appendChild(contractor);
+      jobContainer.appendChild(earth);
+      jobContainer.appendChild(pay);
+      jobContainer.appendChild(details);
+
+      layer.appendChild(jobContainer);
+  }
+}
+
+// Function to filter data based on search input
+function Searchdata() { // Corrected function name
+  var searchInput = document.getElementById('search').value.toLowerCase();
+
+  fetchData(function (data) {
+      var searchResult = Object.keys(data)
+          .filter(id => data[id].jobName.toLowerCase().includes(searchInput))
+          .reduce((result, id) => {
+              result[id] = data[id];
+              return result;
+          }, {});
+
+      showData(searchResult);
+  });
+}
+
+// Initial page load
+window.onload = function () {
+  fetchData(showData);
+};
