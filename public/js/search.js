@@ -41,15 +41,25 @@ function showData(data) {
       var details = document.createElement("p");
       details.innerText = "Details: " + jobData.details;
 
+      // Create a button
+      var detailsButton = document.createElement("button");
+      detailsButton.innerText = "View Details";
+      detailsButton.onclick = function () {
+          // Redirect to jobdetails.html
+          window.location.href = "jobdetails.html";
+      };
+
       jobContainer.appendChild(jobName);
       jobContainer.appendChild(contractor);
       jobContainer.appendChild(earth);
       jobContainer.appendChild(pay);
       jobContainer.appendChild(details);
+      jobContainer.appendChild(detailsButton); // Append the button
 
       layer.appendChild(jobContainer);
   }
 }
+
 
 // Function to filter data based on search input
 function Searchdata() { // Corrected function name
