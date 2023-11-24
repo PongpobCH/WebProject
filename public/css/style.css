@@ -3,12 +3,30 @@
 	
 	padding-top: 100px;
 	padding-right: 30px;
+<<<<<<< HEAD
 	
 	float: right;
 	
 	
 
 }
+=======
+	float: right;
+
+}
+#container2{
+
+	margin-top: 30px;
+	text-align: center;
+	
+}
+
+#logintopright{
+
+	font-size: 30px;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+>>>>>>> WorkinProgress
 
 
 #search_button{
@@ -40,6 +58,10 @@
 	padding-top: 30px;
 
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> WorkinProgress
 #header{
 	
 
@@ -73,6 +95,30 @@
 
 }
 
+<<<<<<< HEAD
+=======
+.form2{
+	
+	color: white;
+	font-size:  36px;
+	justify-content: center;
+	
+
+}
+
+.form2 input{
+
+	margin-left: 20px;
+	padding-left: 10px;
+	margin-right: 100px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-size: 36px;
+
+}
+
+
+>>>>>>> WorkinProgress
 #errordisplay{
 	/*margin-top: -20px;*/
 	font-size:12px;
@@ -83,3 +129,57 @@ body{
 	background-color: rgb(30, 27, 27);
 }
 
+<<<<<<< HEAD
+=======
+
+#button-confirm {
+
+	align-items: center;
+	background-clip: padding-box;
+	background-color: #fa6400;
+	border: 1px solid transparent;
+	border-radius: .25rem;
+	box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+	box-sizing: border-box;
+	color: #fff;
+	cursor: pointer;
+	display: inline-flex;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 16px;
+	font-weight: 600;
+	justify-content: center;
+	line-height: 1.25;
+	margin: 0;
+	min-height: 3rem;
+	padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+	position: relative;
+	text-decoration: none;
+	transition: all 250ms;
+	
+	
+	touch-action: manipulation;
+	vertical-align: baseline;
+	width: auto;
+
+
+  }
+  
+  #button-confirm:hover,
+  #button-confirm:focus {
+	background-color: #fb8332;
+	box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  }
+  
+  #button-confirm:hover {
+	transform: translateY(-1px);
+  }
+  
+  #button-confirm:active {
+	background-color: #c85000;
+	box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+	transform: translateY(0);
+  }
+
+  
+
+>>>>>>> WorkinProgress
