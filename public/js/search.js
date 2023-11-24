@@ -18,47 +18,49 @@ function fetchData(callback) {
 
 // Function to display data on the page
 function showData(data) {
-  var layer = document.getElementById("layer");
-  layer.innerHTML = ""; // Clear previous data
-
-  for (var id in data) {
+    var layer = document.getElementById("layer");
+    layer.innerHTML = ""; // Clear previous data
+  
+    for (var id in data) {
       var jobData = data[id];
-
+  
       var jobContainer = document.createElement("div");
-
+  
       var jobName = document.createElement("p");
       jobName.innerText = "Job: " + jobData.jobName;
-
+  
       var contractor = document.createElement("p");
       contractor.innerText = "Contractor: " + jobData.contractor;
-
+  
       var earth = document.createElement("p");
       earth.innerText = "From: " + jobData.earth;
-
+  
       var pay = document.createElement("p");
       pay.innerText = "Pay: " + jobData.pay;
-
+  
       var details = document.createElement("p");
       details.innerText = "Details: " + jobData.details;
-
+  
       // Create a button
       var detailsButton = document.createElement("button");
       detailsButton.innerText = "View Details";
-      detailsButton.onclick = function () {
-          // Redirect to jobdetails.html
-          window.location.href = "jobdetails.html";
-      };
-
+      detailsButton.onclick = (function (jobId) {
+        return function () {
+          // Redirect to jobdetails.html with the correct job ID
+          window.location.href = "jobdetails.html?id=" + jobId;
+        };
+      })(id);
+  
       jobContainer.appendChild(jobName);
       jobContainer.appendChild(contractor);
       jobContainer.appendChild(earth);
       jobContainer.appendChild(pay);
       jobContainer.appendChild(details);
       jobContainer.appendChild(detailsButton); // Append the button
-
+  
       layer.appendChild(jobContainer);
+    }
   }
-}
 
 
 // Function to filter data based on search input
