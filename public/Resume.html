@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="profile.css">
-    <script type="text/javascript" src="side_nav.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/stylefeed.css">
+    <script type="text/javascript" src="js/feed.js"></script>
     <title>Resume</title>
 </head>
 <body>
@@ -23,18 +23,37 @@
     
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="Profile.html">Profile</a>
-        <a href="Edit_Profile.html">Edit Profile</a>
+        <a href="feed.html">Profile</a>
         <a href="Resume.html">Resume</a>
         <a href="Your_job.html">Your Job</a>
+        <a href="/logout"> Logout</a>
       </div>
 
       <span onclick="openNav()">Menu</span>
 
-      <div id="main" >
+      <div id="main">
         <div class ="card" id ="info">
-        <input type="file" accept="image/jpeg, image/png, image/jpg">
+            
+            <div id="browsePic">
+                <div id="resumePic">
+                    <img src= "img/avatar.png" alt="">
+                </div>
+                <form action="/resumepic" method="post" id="formId" enctype="multipart/form-data">
+                    <input type="file" id="fileField" name="avatar" value="fileToUpload" placeholder="" hidden>
+                </form>
+            </div>
+            
+            Hello <span id="username"> </span>, Welcome back!
         </div>
+        
+          <div class="item3">
+              <div id="posting">
+                  <textarea name="msg" id="textmsg" value="" placeholder="" rows="4" cols="50"></textarea>
+                <br>
+                  <button id="postbutton">Post</button>
+              </div>
+        </div>
+
       </div>
 </body>
 </html>

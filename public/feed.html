@@ -1,17 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>Login</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link type="text/css" rel="stylesheet" href="css/stylefeed.css">
 		<script type="text/javascript" src="js/feed.js"></script>
 	</head>
-	<body>
-		<div class="grid-container">
+	<body>		
+		<header>
+			<div class = "logo">
+				<a href="#">EVERYWHERE</a>
+			</div>
+		   <ul class="menu">
+			<li><a href="#">Search</a></li>
+			<li><a href="#">Login</a></li>
+			<li><a href="#">Register</a></li>
+		   </ul>
+		</div>    
+		</div>
+		</header>
 
-			<div class="item1">
+		<div id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<a href="feed.html">Profile</a>
+			<a href="Resume.html">Resume</a>
+			<a href="Your_job.html">Your Job</a>
+			<a href="/logout"> Logout</a>
+		  </div>
+	
+		<span onclick="openNav()">Menu</span>
 				
-				<div id="browsePic">
+		<div id="main">
+				<div id="info">
+					<div id="browsePic">
 					<div id="displayPic">
 						<img src= "img/avatar.png" alt="">
 					</div>
@@ -20,11 +41,27 @@
 					</form>
 				</div>
 				
-				Hello <span id="username"> </span>, Welcome back!
-			</div>
+				<h1>Username: <span id="username"></span></h1>
 			
-  			<div class="item2"> <a href="/logout"> Logout</a> </div>
-  			<div class="item3">
+				<br>
+        <h2>Name: </h2>
+        <input type = "text">
+        <h2>Job: </h2>
+        <input type = "text">
+        <h2>Age: </h2>
+        <input type = "number">
+        <br>
+        <h2>Degree: </h2>
+        <input type = "text">
+        <br>
+        <h2>Contact</h2>
+        <input type = "text">
+        <br>
+        <h2>Tel: </h2>
+        <input type = "text">
+        <h2>Email: </h2>
+        <input type = "text">
+		
   				<div id="posting">
   					<textarea name="msg" id="textmsg" value="" placeholder="" rows="4" cols="50"></textarea>
 					<br>
@@ -34,9 +71,8 @@
   				<div id="feed-container">
   					
   				</div>
-  				
-  			</div>  
-		</div>
+			</div>
+  			</div>	
 	
 	</body>
 </html>

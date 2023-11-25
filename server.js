@@ -89,6 +89,26 @@ app.post("/profilepic", async (req, res) => {
       return res.redirect("feed.html");
     });
   });
+
+  app.post("/resumepic", async (req, res) => {
+    let upload = multer({ storage: storage, fileFilter: imageFilter }).single(
+      "resume"
+    );
+    upload(req, res, (err) => {
+      if (req.fileValidationError) {
+        return res.send(req.fileValidationError);
+      } else if (!req.file) {
+        return res.send("Please select an image to upload");
+      } else if (err instanceof multer.MulterError) {
+        return res.send(err);
+      } else if (err) {
+        return res.send(err);
+      }
+      updateImg(req.cookies.username, req.file.filename);
+      res.cookie("img", req.file.filename);
+      return res.redirect("Resume.html");
+    });
+  });
   
   const updateImg = async (username, filen) => {
     let sql = `UPDATE userInfo SET img = '${filen}' WHERE username = '${username}'`;
@@ -153,5 +173,5 @@ app.post("/checkLogin", async (req, res) => {
   });
   
   app.listen(port, hostname, () => {
-    console.log(`Server running at   http://${hostname}:${port}/login.html`);
+    console.log(`Server running at   http://${hostname}:${port}/register.html`);
   });

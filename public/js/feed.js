@@ -46,6 +46,10 @@ function checkCookie() {
   function fileUpload() {
 	document.getElementById("fileField").click();
   }
+
+  function resumeUpload() {
+	document.getElementById("fileField").click();
+  }
   
   function fileSubmit() {
 	document.getElementById("formId").submit();
@@ -104,4 +108,14 @@ function checkCookie() {
 	  temp1.innerHTML = "Posted by: " + data[keys[i]]["username"];
 	  temp.appendChild(temp1);
 	}
+  }
+
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
   }
