@@ -141,7 +141,7 @@ app.post("/checkLogin", async (req, res) => {
       res.cookie("username", result[keys[numberOfKeys]].username);
       res.cookie("img", result[keys[numberOfKeys]].img);
       IsCorrect = true;
-      return res.redirect("feed.html");
+      return res.redirect("searchjob.html");
     }
   }
   if (IsCorrect == false) {
@@ -153,5 +153,5 @@ app.post("/checkLogin", async (req, res) => {
   });
   
   app.listen(port, hostname, () => {
-    console.log(`Server running at   http://${hostname}:${port}/login.html`);
+    console.log(`Server running at   http://${hostname}:${port}/register.html`);
   });

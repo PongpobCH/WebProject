@@ -8,6 +8,12 @@
 	</head>
 	<body>
 
+		<div id=container>
+			<form class="form" action="/regisDB" method="post" accept-charset="utf-8">
+				<fieldset>
+					<legend> Register </legend>
+
+
 		<div id = header> 
 			
 			<form action= "searchjob.html" > 
@@ -17,8 +23,8 @@
 					<text id= "name"> nameholder </text>
 					
 						
-							
-					<input type = submit id = "search_button" value= "searchjob">
+					<!-- This is a comment in the body of the HTML document -->		
+					<input type = submit id = "search_button" value= "searchjob"> --> 
 					<text id= "logintopright"> Amogus </text> 
 							
 							
@@ -44,14 +50,21 @@
 					<legend id= "registericon"> Register </legend>
 
 
+
 					Username:<input type="text" name="username" value="" placeholder="" required><br>
 					Email:<input type="text" name="email" value="" placeholder="" required><br>
 					Password: <input type="password" name="password" value="" placeholder=""><br>
+
 					<span id="errordisplay"></span><br>
+
+					<input type="submit" name="submit" value="Register">
+				</fieldset>
+
 					
 					<input type="submit" id = "button-confirm" value= "CONFIRM">
 
 				
+
 
 
 			</form>
