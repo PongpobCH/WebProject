@@ -141,7 +141,7 @@ app.post("/checkLogin", async (req, res) => {
       res.cookie("username", result[keys[numberOfKeys]].username);
       res.cookie("img", result[keys[numberOfKeys]].img);
       IsCorrect = true;
-      return res.redirect("feed.html");
+      return res.redirect("searchpage.html");
     }
   }
   if (IsCorrect == false) {
