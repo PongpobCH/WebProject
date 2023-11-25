@@ -41,3 +41,24 @@ window.onload = function () {
         console.error("Job ID not found in the URL");
     }
 };
+
+async function readPost() {
+    let response = await fetch("/readPost");
+    let content = await response.json();
+    showPost(content);
+  }
+  
+  // complete it
+  async function writePost(msg) {
+    let response = await fetch("/writePost", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        user: getCookie("username"),
+        message: msg,
+      }),
+    });
+  }
