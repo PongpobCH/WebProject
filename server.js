@@ -106,7 +106,7 @@ app.post("/profilepic", async (req, res) => {
  //ทำให้สมบูรณ์
 app.get("/readPost", async (req, res) => {
     let sql =
-      "CREATE TABLE IF NOT EXISTS user-Post (username VARCHAR(255), post VARCHAR(500))";
+      "CREATE TABLE IF NOT EXISTS userPost (username VARCHAR(255), post VARCHAR(500))";
     let result = await queryDB(sql);
     sql = `SELECT post, username FROM userPost`;
     result = await queryDB(sql);
@@ -118,11 +118,11 @@ app.get("/readPost", async (req, res) => {
  //ทำให้สมบูรณ์
 app.post("/writePost", async (req, res) => {
     let sql =
-    "CREATE TABLE IF NOT EXISTS user-Post (username VARCHAR(255), post VARCHAR(500))";
+    "CREATE TABLE IF NOT EXISTS userPost (username VARCHAR(255), post VARCHAR(500))";
   let result = await queryDB(sql);
   sql = `INSERT INTO userPost (username,post) VALUES ("${req.body.user}", "${req.body.message}")`;
   result = await queryDB(sql);
-  res.redirect("feed.html");
+  res.redirect("jobdetails.html");
 });
   
 //ทำให้สมบูรณ์
@@ -141,7 +141,7 @@ app.post("/checkLogin", async (req, res) => {
       res.cookie("username", result[keys[numberOfKeys]].username);
       res.cookie("img", result[keys[numberOfKeys]].img);
       IsCorrect = true;
-      return res.redirect("feed.html");
+      return res.redirect("login.html");
     }
   }
   if (IsCorrect == false) {
