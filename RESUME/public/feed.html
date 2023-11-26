@@ -13,8 +13,8 @@
 			</div>
 		   <ul class="menu">
 			<li><a href="#">Search</a></li>
-			<li><a href="#">Login</a></li>
-			<li><a href="#">Register</a></li>
+			<li><a href="feed.html">Profile</a></li>
+			<li><a href="/logout">Logout</a></li>
 		   </ul>
 		</div>    
 		</div>
@@ -23,16 +23,26 @@
 		<div id="mySidenav" class="sidenav">
 			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 			<a href="feed.html">Profile</a>
-			<a href="Resume.html">Resume</a>
 			<a href="Your_job.html">Your Job</a>
-			<a href="/logout"> Logout</a>
 		  </div>
 	
-		<span onclick="openNav()">Menu</span>
+		  <div id="navigatorpic" onclick="openNav()">
+			<img src="img/56763.png" alt="navigatorpic">
+			  </div>
 				
 		<div id="main">
-				<div id="info">
-					<div id="browsePic">
+				<div class = "card">
+					
+					<br>
+
+					<div id="info">
+					<h2>Username: <h1 id="username"></h1></h2>
+					<br>
+					<h2>Resume</h2>
+					</div>
+				
+
+				<div id="browsePic">
 					<div id="displayPic">
 						<img src= "img/avatar.png" alt="">
 					</div>
@@ -41,37 +51,24 @@
 					</form>
 				</div>
 				
-				<h1>Username: <span id="username"></span></h1>
-			
 				<br>
-        <h2>Name: </h2>
-        <input type = "text">
-        <h2>Job: </h2>
-        <input type = "text">
-        <h2>Age: </h2>
-        <input type = "number">
-        <br>
-        <h2>Degree: </h2>
-        <input type = "text">
-        <br>
-        <h2>Contact</h2>
-        <input type = "text">
-        <br>
-        <h2>Tel: </h2>
-        <input type = "text">
-        <h2>Email: </h2>
-        <input type = "text">
+				<div id="info">
+				<h2>Upload your resume here.</h2>
+				</div>
+				
+				</div>
+				<br>
 		
   				<div id="posting">
-  					<textarea name="msg" id="textmsg" value="" placeholder="" rows="4" cols="50"></textarea>
+  					
 					<br>
-  					<button id="postbutton">Post</button>
+  					<span id="postbutton"></span>
   				</div>
-  				<hr>
+  				
   				<div id="feed-container">
   					
   				</div>
-			</div>
+			
   			</div>	
 	
 	</body>

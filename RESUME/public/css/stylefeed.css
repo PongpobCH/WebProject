@@ -91,18 +91,9 @@ hr {
 
 #displayPic{
 	/*display: inline-block;*/
-	width:200px;
-	height: 200px;
+	width:837px;
+	height: 1134px;
 	border: 2px solid white;
-
-	/*background-color: #94A5AC;*/
-}
-
-#resumePic{
-	/*display: inline-block;*/
-	width:500px;
-	height: 500px;
-	border: 2px solid black;
 
 	/*background-color: #94A5AC;*/
 }
@@ -110,6 +101,13 @@ hr {
 img{
 	width:100%;
 	height: 100%;
+}
+
+#navigatorpic{
+  width: 3%;
+  height: 3%;
+  margin-top: 10px;
+  margin-left: 10px;
 }
 
 .hidden{
@@ -127,8 +125,10 @@ body {
 }
 
 #info{
+    display: inline-block;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color:white;
+    color: #141414;
+    padding-left: 2%;
 }
 header{
     padding: 1rem;
@@ -158,9 +158,12 @@ header{
 }
 
 .card {
-  width: 500px;
+  width: 837px;
   background: white;
+  border-radius: 25px;
+  
 }
+
 span {
     font-size: 20px;
     color: grey;

@@ -27,12 +27,13 @@ function checkCookie() {
   
 	document.getElementById("displayPic").onclick = fileUpload;
 	document.getElementById("fileField").onchange = fileSubmit;
-  
+
 	var username = getCookie("username");
   
 	document.getElementById("username").innerHTML = username;
 	console.log(getCookie("img"));
 	showImg("img/" + getCookie("img"));
+
 	readPost();
   }
   
@@ -46,10 +47,6 @@ function checkCookie() {
   function fileUpload() {
 	document.getElementById("fileField").click();
   }
-
-  function resumeUpload() {
-	document.getElementById("fileField").click();
-  }
   
   function fileSubmit() {
 	document.getElementById("formId").submit();
@@ -61,6 +58,16 @@ function checkCookie() {
 	  var showpic = document.getElementById("displayPic");
 	  showpic.innerHTML = "";
 	  var temp = document.createElement("img");
+	  temp.src = filename;
+	  showpic.appendChild(temp);
+	}
+  }
+
+  function showResume(filename) {
+	if (filename !== "") {
+	  var showresume = document.getElementById("resumePic");
+	  showresume.innerHTML = "";
+	  var temp = document.createElement("resume");
 	  temp.src = filename;
 	  showpic.appendChild(temp);
 	}
