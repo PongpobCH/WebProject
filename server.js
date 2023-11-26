@@ -143,6 +143,7 @@ app.post("/checkLogin", async (req, res) => {
       IsCorrect = true;
       return res.redirect("searchpage.html");
     }
+    
   }
   if (IsCorrect == false) {
     IsCorrect = false;
