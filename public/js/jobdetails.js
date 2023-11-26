@@ -41,3 +41,6 @@ window.onload = function () {
         console.error("Job ID not found in the URL");
     }
 };
+
+
+
