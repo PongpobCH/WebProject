@@ -9,12 +9,10 @@ const multer = require('multer');
 const path = require('path');
 const mysql = require('mysql');
 
-
 app.use(express.static('public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
-
 
 const storage = multer.diskStorage({
     destination: (req, file, callback) => {
@@ -105,7 +103,6 @@ app.post("/profilepic", async (req, res) => {
     return res.redirect("login.html");
   });
 
-
 //  //ทำให้สมบูรณ์
 // app.get("/readPost", async (req, res) => {
 //     let sql =
@@ -117,7 +114,6 @@ app.post("/profilepic", async (req, res) => {
 //     console.log(result);
 //     res.json(result);
 //   });
-
   
  //ทำให้สมบูรณ์
 // app.post("/writePost", async (req, res) => {
@@ -129,7 +125,6 @@ app.post("/profilepic", async (req, res) => {
 //   res.redirect("feed.html");
 // });
   
-
 //ทำให้สมบูรณ์
 app.post("/checkLogin", async (req, res) => {
     let sql = `SELECT username, img, password FROM userInfo`;
@@ -146,9 +141,8 @@ app.post("/checkLogin", async (req, res) => {
       res.cookie("username", result[keys[numberOfKeys]].username);
       res.cookie("img", result[keys[numberOfKeys]].img);
       IsCorrect = true;
-      return res.redirect("searchjob.html");
+      return res.redirect("Your_job.html");
     }
-
   }
   if (IsCorrect == false) {
     IsCorrect = false;
@@ -157,16 +151,7 @@ app.post("/checkLogin", async (req, res) => {
   }
 
   });
-
-
+  
   app.listen(port, hostname, () => {
-
-
-
-    console.log(`Server running at   http://${hostname}:${port}/login.html`);
-
-    //console.log(`Server running at   http://${hostname}:${port}/login.html`);
-
-
-    console.log(`Server running at   http://${hostname}:${port}/register.html`);
+    console.log(`Server running at   http://${hostname}:${port}/searchpage.html`);
   });
