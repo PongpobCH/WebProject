@@ -10,6 +10,7 @@ const path = require('path');
 const mysql = require('mysql');
 
 
+
 app.use(express.static('public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
@@ -159,13 +160,13 @@ app.post("/checkLogin", async (req, res) => {
   });
   
   app.listen(port, hostname, () => {
-<<<<<<<< HEAD:server.js
 
-    console.log(`Server running at   http://${hostname}:${port}/login.html`);
 
     //console.log(`Server running at   http://${hostname}:${port}/login.html`);
 
-========
+    //console.log(`Server running at   http://${hostname}:${port}/login.html`);
+
+
     console.log(`Server running at   http://${hostname}:${port}/register.html`);
->>>>>>>> 714ca1f0c0d105e7b1dda20d84cd14419a6f7030:RESUME/server.js
+
   });

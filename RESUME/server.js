@@ -146,7 +146,7 @@ app.post("/checkLogin", async (req, res) => {
       res.cookie("username", result[keys[numberOfKeys]].username);
       res.cookie("img", result[keys[numberOfKeys]].img);
       IsCorrect = true;
-      return res.redirect("searchpage.html");
+      return res.redirect("searchjob.html");
     }
 
   }
@@ -157,15 +157,16 @@ app.post("/checkLogin", async (req, res) => {
   }
 
   });
-  
+
+
   app.listen(port, hostname, () => {
-<<<<<<<< HEAD:server.js
+
+
 
     console.log(`Server running at   http://${hostname}:${port}/login.html`);
 
     //console.log(`Server running at   http://${hostname}:${port}/login.html`);
 
-========
+
     console.log(`Server running at   http://${hostname}:${port}/register.html`);
->>>>>>>> 714ca1f0c0d105e7b1dda20d84cd14419a6f7030:RESUME/server.js
   });
