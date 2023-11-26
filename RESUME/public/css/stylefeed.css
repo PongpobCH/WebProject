@@ -1,0 +1,361 @@
+/*.item1 { grid-area: header;}
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }*/
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header'
+    'menu main main main';
+  grid-gap: 10px;
+  background-color: #4cad4b;
+  padding: 10px;
+}
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+#posting{
+	text-align: right;
+	padding-right: 3%;
+	width:50%;
+	
+}
+
+textarea{
+	width: 90%;
+	min-width: 200px;
+	height: 100px;
+	margin-right: 0px;
+	text-align: left;
+	font-size: 20px;
+}
+
+#postbutton{
+	width:20%;
+	min-width: 100px;
+	font-size: 20px;
+}
+
+hr {
+   /* display: block;*/
+    height: 1px;
+    border: 0;
+    border-top: 10px solid #4cad4b;
+	border-radius: 10px;
+    margin: 15px 10px;
+    padding: 0; 
+} 
+
+.newsfeed{
+	display: flex;
+	width: 100%;
+	text-align: left;
+	font-size: 20px;
+	margin-top: 15px;
+}
+
+.postmsg{
+	border-radius: 20px;
+	width: 50%;
+	background-color: #FEBE9A;
+	margin-left: 15px;
+
+	height: 100px;
+	text-align: center;
+	line-height: 100px;
+	min-width: 200px;
+}
+
+.postuser {
+	height: 100px;
+	width:50%;
+	text-align: center;
+	line-height: 100px;
+	min-width: 200px;
+}
+
+.picicon {
+	display: inline-block;
+	height: 50px;
+	width:50px;
+}
+
+#browsePic{
+	display: inline-block;
+	margin-right: 3%;
+}
+
+#displayPic{
+	/*display: inline-block;*/
+	width:837px;
+	height: 1134px;
+	border: 2px solid white;
+
+	/*background-color: #94A5AC;*/
+}
+
+img{
+	width:100%;
+	height: 100%;
+}
+
+#navigatorpic{
+  width: 3%;
+  height: 3%;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.hidden{
+	display: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #141414;
+}
+
+#info{
+    display: inline-block;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #141414;
+    padding-left: 2%;
+}
+header{
+    padding: 1rem;
+    background-color: #fa8541;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo a{
+    font-size: 2rem;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+}
+
+.menu{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    
+}
+.menu li{
+    margin: 0 1rem;
+}
+.menu li a{
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+}
+
+.card {
+  width: 837px;
+  background: white;
+  border-radius: 25px;
+  
+}
+
+span {
+    font-size: 20px;
+    color: grey;
+}
+
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  #main {
+    transition: margin-left .5s;
+    padding: 20px;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+@media only screen and (max-width: 767px){
+	.grid-container {
+		grid-template-areas:
+		  'header'
+		  'menu' 'main';
+	}
+}
+
+/*style.css*/
+#container{
+	
+	padding-top: 100px;
+	padding-right: 30px;
+	float: right;
+
+}
+#container2{
+
+	margin-top: 30px;
+	text-align: center;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+#logintopright{
+
+	font-size: 30px;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+
+#search_button{
+
+	font-size: 30px;
+	padding-left: 30px;
+	color:white;
+	background-color: orangered;
+	border: none;
+	
+
+}
+
+#LoginIcon{
+
+	font-size: 72px;
+
+}
+
+.form{
+	
+	color: white;
+	font-size:  36px;
+	
+}
+
+.form input{
+
+	padding-left: 10px;
+	margin-right: 100px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-size: 36px;
+
+}
+
+.form2{
+	
+	color: white;
+	font-size:  36px;
+	justify-content: center;
+	
+
+}
+
+.form2 input{
+
+	margin-left: 20px;
+	padding-left: 10px;
+	margin-right: 100px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-size: 36px;
+
+}
+
+
+#errordisplay{
+	/*margin-top: -20px;*/
+	font-size:12px;
+	color: #EE0019;
+}
+
+#button-confirm {
+
+	align-items: center;
+	background-clip: padding-box;
+	background-color: #fa6400;
+	border: 1px solid transparent;
+	border-radius: .25rem;
+	box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+	box-sizing: border-box;
+	color: #fff;
+	cursor: pointer;
+	display: inline-flex;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 16px;
+	font-weight: 600;
+	justify-content: center;
+	line-height: 1.25;
+	margin: 0;
+	min-height: 3rem;
+	padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+	position: relative;
+	text-decoration: none;
+	transition: all 250ms;
+	
+	
+	touch-action: manipulation;
+	vertical-align: baseline;
+	width: auto;
+
+
+  }
+  
+  #button-confirm:hover,
+  #button-confirm:focus {
+	background-color: #fb8332;
+	box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  }
+  
+  #button-confirm:hover {
+	transform: translateY(-1px);
+  }
+  
+  #button-confirm:active {
+	background-color: #c85000;
+	box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+	transform: translateY(0);
+  }
