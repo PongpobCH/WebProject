@@ -40,5 +40,9 @@ window.onload = function () {
     } else {
         console.error("Job ID not found in the URL");
     }
+<<<<<<< HEAD
 };
 
+=======
+};
+>>>>>>> parent of 9db4162 (เพิ่มhtmlของกล่องข้อความ)

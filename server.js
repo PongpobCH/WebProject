@@ -103,6 +103,7 @@ app.post("/profilepic", async (req, res) => {
     return res.redirect("login.html");
   });
   
+<<<<<<< HEAD
  //ทำให้สมบูรณ์
 app.get("/readPost", async (req, res) => {
     let sql =
@@ -124,6 +125,29 @@ app.post("/writePost", async (req, res) => {
   result = await queryDB(sql);
   res.redirect("jobdetails.html");
 });
+=======
+//  //ทำให้สมบูรณ์
+// app.get("/readPost", async (req, res) => {
+//     let sql =
+//       "CREATE TABLE IF NOT EXISTS userPost (username VARCHAR(255), post VARCHAR(500))";
+//     let result = await queryDB(sql);
+//     sql = `SELECT post, username FROM userPost`;
+//     result = await queryDB(sql);
+//     result = Object.assign({}, result);
+//     console.log(result);
+//     res.json(result);
+//   });
+  
+ //ทำให้สมบูรณ์
+// app.post("/writePost", async (req, res) => {
+//     let sql =
+//     "CREATE TABLE IF NOT EXISTS userPost (username VARCHAR(255), post VARCHAR(500))";
+//   let result = await queryDB(sql);
+//   sql = `INSERT INTO userPost (username,post) VALUES ("${req.body.user}", "${req.body.message}")`;
+//   result = await queryDB(sql);
+//   res.redirect("feed.html");
+// });
+>>>>>>> parent of 9db4162 (เพิ่มhtmlของกล่องข้อความ)
   
 //ทำให้สมบูรณ์
 app.post("/checkLogin", async (req, res) => {
