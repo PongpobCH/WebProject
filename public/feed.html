@@ -1,16 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>Login</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link type="text/css" rel="stylesheet" href="css/stylefeed.css">
 		<script type="text/javascript" src="js/feed.js"></script>
 	</head>
-	<body>
-		<div class="grid-container">
+	<body>		
+		<header>
+			<div class = "logo">
+				<a href="#">EVERYWHERE</a>
+			</div>
+		   <ul class="menu">
+			<li><a href="#">Search</a></li>
+			<li><a href="feed.html">Profile</a></li>
+			<li><a href="/logout">Logout</a></li>
+		   </ul>
+		</div>    
+		</div>
+		</header>
 
-			<div class="item1">
+		<div id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<a href="feed.html">Profile</a>
+			<a href="Your_job.html">Your Job</a>
+		  </div>
+	
+		  <div id="navigatorpic" onclick="openNav()">
+			<img src="img/56763.png" alt="navigatorpic">
+			  </div>
 				
+		<div id="main">
+				<div class = "card">
+					
+					<br>
+
+					<div id="info">
+					<h2>Username: <h1 id="username"></h1></h2>
+					<br>
+					<h2>Resume</h2>
+					</div>
+				
+
 				<div id="browsePic">
 					<div id="displayPic">
 						<img src= "img/avatar.png" alt="">
@@ -20,23 +51,25 @@
 					</form>
 				</div>
 				
-				Hello <span id="username"> </span>, Welcome back!
-			</div>
-			
-  			<div class="item2"> <a href="/logout"> Logout</a> </div>
-  			<div class="item3">
+				<br>
+				<div id="info">
+				<h2>Upload your resume here.</h2>
+				</div>
+				
+				</div>
+				<br>
+		
   				<div id="posting">
-  					<textarea name="msg" id="textmsg" value="" placeholder="" rows="4" cols="50"></textarea>
+  					
 					<br>
-  					<button id="postbutton">Post</button>
+  					<span id="postbutton"></span>
   				</div>
-  				<hr>
+  				
   				<div id="feed-container">
   					
   				</div>
-  				
-  			</div>  
-		</div>
+			
+  			</div>	
 	
 	</body>
 </html>

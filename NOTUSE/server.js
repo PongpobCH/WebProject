@@ -10,6 +10,7 @@ const path = require('path');
 const mysql = require('mysql');
 
 
+
 app.use(express.static('public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
@@ -146,7 +147,7 @@ app.post("/checkLogin", async (req, res) => {
       res.cookie("username", result[keys[numberOfKeys]].username);
       res.cookie("img", result[keys[numberOfKeys]].img);
       IsCorrect = true;
-      return res.redirect("searchjob.html");
+      return res.redirect("searchpage.html");
     }
 
   }
@@ -157,16 +158,15 @@ app.post("/checkLogin", async (req, res) => {
   }
 
   });
-
-
+  
   app.listen(port, hostname, () => {
 
 
-
-    console.log(`Server running at   http://${hostname}:${port}/login.html`);
+    //console.log(`Server running at   http://${hostname}:${port}/login.html`);
 
     //console.log(`Server running at   http://${hostname}:${port}/login.html`);
 
 
     console.log(`Server running at   http://${hostname}:${port}/register.html`);
+
   });
