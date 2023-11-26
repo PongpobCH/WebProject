@@ -153,5 +153,5 @@ app.post("/checkLogin", async (req, res) => {
   });
   
   app.listen(port, hostname, () => {
-    console.log(`Server running at   http://${hostname}:${port}/searchpage.html`);
+    console.log(`Server running at   http://${hostname}:${port}/login.html`);
   });

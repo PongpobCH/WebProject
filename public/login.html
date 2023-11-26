@@ -3,36 +3,28 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Login</title>
-		<link type="text/css" rel="stylesheet" href="css/stylejobdetails.css">
+		<link type="text/css" rel="stylesheet" href="css/stylefeed.css">
 		<script type="text/javascript" src="js/login.js"></script>
 	</head>
 	<body>
 
 
-		<div id = header> 
-			
-			<form action= "searchpage.html" > 
-
-				<div id = nameholder> 
+		<header>
+			<div class = "logo">
 				
-					<text id= "name"> nameholder </text>
-	
-						
-							
-					<input type = submit id = "search_button" value= "searchpage">
-							
-							
-	
-					
-					
-				</div>
-				
-					name
-
-			</form>
+				<a href="#">EVERYWHERE</a>
 			
+			</div>
+
+		   <ul class="menu">
+			<li><a href="register.html">Register</a></li>
+			<li><a href="login.html">Login</a></li>
+		   </ul>
+		</div>    
 
 		</div>
+		</header>
+
 
 		<div id=container>
 			<form class="form" action= "/checkLogin" method="post" accept-charset="utf-8">
@@ -46,9 +38,9 @@
 					<span id="errordisplay"></span><br>
 					
 					
-					<input type="submit" value= "confirm" >
+					
 
-
+					<input type="submit" id = "button-confirm" value= "CONFIRM">
 				
 
 
