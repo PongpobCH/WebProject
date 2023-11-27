@@ -7,8 +7,7 @@ function checkCookie() {
   }
   
   checkCookie();
-  
-  window.onload = pageLoad;
+
   
   function getCookie(name) {
 	var value = "";
@@ -39,9 +38,9 @@ function checkCookie() {
   }
   
   async function getData() {
-	var msg = document.getElementById("textmsg").value;
+	var msg2 = document.getElementById("textmsg").value;
 	document.getElementById("textmsg").value = "";
-	await writePost(msg);
+	await writePost(msg2);
 	await readPost();
   }
   
@@ -127,3 +126,5 @@ function checkCookie() {
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("main").style.marginLeft = "0";
   }
+
+  window.onload = pageLoad;

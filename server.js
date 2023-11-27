@@ -133,10 +133,9 @@ app.post("/profilepic", async (req, res) => {
   
  //ทำให้สมบูรณ์
 app.get("/readPost", async (req, res) => {
-    let sql =
-      "CREATE TABLE IF NOT EXISTS userPost (username VARCHAR(255), post VARCHAR(500))";
+    let sql = "CREATE TABLE IF NOT EXISTS userPost (username VARCHAR(255), post VARCHAR(500))";
     let result = await queryDB(sql);
-    sql = `SELECT post, username FROM userPost`;
+    sql = `SELECT username, post FROM userPost`;
     result = await queryDB(sql);
     result = Object.assign({}, result);
     console.log(result);
@@ -150,7 +149,8 @@ app.post("/writePost", async (req, res) => {
   let result = await queryDB(sql);
   sql = `INSERT INTO userPost (username,post) VALUES ("${req.body.user}", "${req.body.message}")`;
   result = await queryDB(sql);
-  res.redirect("feed.html");
+ res.redirect("jobdetails.html");
+
 });
   
 //ทำให้สมบูรณ์
