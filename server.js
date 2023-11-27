@@ -71,23 +71,30 @@ app.post("/regisDB", async (req, res) => {
 
 app.post("/applyJob", async (req, res) => {
   
-  let sql =
-  `CREATE TABLE IF NOT EXISTS userjob (id VARCHAR(10) AUTO_INCREMENT PRIMARY KEY, jobName VARCHAR(100), image VARCHAR(100), contractor VARCHAR(100), earth VARCHAR(100), pay VARCHAR(100), details VARCHAR(200), moreDetails VARCHAR(500))`;
-  result = await queryDB(sql);
-  
-  const checkUsernameSQL = `SELECT savedJobID FROM WHERE username = '${req.body.username}'`;
-  const result = await queryDB(sql);
-  let savedJobID = result.length > 0 ? JSON.parse(result[0].savedJobID) : [];
+  let jobSql =
+  `CREATE TABLE IF NOT EXISTS userjob (savedJobID VARCHAR(10) AUTO_INCREMENT PRIMARY KEY, username VARCHAR(255), jobName VARCHAR(100))`;
+  result = await queryDB(jobSql);
+
+  let savedJobID = result.length >= 0 ? JSON.parse(result[0].savedJobID) : [];
   
   if(!Array.isArray(savedJobID)) {
     savedJobID = [];
   }
   
-  sql = `INSERT INTO userjob (job_id, jobName, image, contractor, earth, pay, details, moreDetails) VALUES ("${req.body.job_id}", "${req.body.jobName}", "", "${req.body.contractor}", "${req.body.earth}", "${req.body.pay}", "${req.body.details}", "${req.body.moreDetails}")`
-  result = await queryDB(sql);
+  if(!savedJobID.includes(jobID)) {
+    
+    savedJobID.push(jobID)
+    
+    if(savedJobID = 0){
+      const insertSql = `INSERT INTO userjob (savedJobID, username, jobName) VALUES ("${req.body.job_id}", "${req.body.username}", "${req.body.jobName}")`;
+      await queryDB(insertSql);
+    }
+    else{
+      alert("You can only save one job.");
+    }
+  }
 
-
-  //return res.redirect("searchjob.html");
+  return res.redirect("Your_job.html");
 })
 
 //ทำให้สมบูรณ์
