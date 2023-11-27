@@ -4,15 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/stylejobdetails.css">
-
-    
     <script type="text/javascript" src="js/search.js"></script>
-   
-    <script type="text/javascript" src="js/jobdetails.js"></script>
-
-    <!-- <script type="text/javascript" src="js/feeds.js"></script> -->
-    
-
     <title>Search page</title>
 </head>
 <body>
@@ -30,42 +22,25 @@
     <div id="container-job">
         <div id="layer">
             
-            <form class="form" action="/applyJob" accept-charset="utf-8">
                 <div id="job-details"></div>
-                <button>Apply</button>
-            </form>
+                <button onclick="saveJob()">Apply</button>
+            
         </div>
+   
+    <script type="text/javascript" src="js/jobdetails.js"></script>
 
-<div class="grid-container">
-    <div class="item3">
-         <div id="posting">
-
-
-
-                  <textarea name="msg" id="textmsg" value="" placeholder="" rows="4" cols="50">  </textarea>
-                 
-                
-                  
-                
-
-
-                <button id="postbutton"> Post </button>
-
-                
-                
-                  
+    <div class="grid-container">
+          <div class="item3">
+              <div id="posting">
+                  <textarea name="msg" id="textmsg" value="" placeholder="" rows="4" cols="50"></textarea>
+                <br>
+                  <button id="postbutton">Post</button>
               </div>
-
               <hr>
-
               <div id="feed-container">
-
               </div>
-
-
           </div>  
     </div>
     </div>
 
-</body>
-    
+</body>   

@@ -69,34 +69,6 @@ app.post("/regisDB", async (req, res) => {
     return res.redirect("login.html");
   });
 
-app.post("/applyJob", async (req, res) => {
-  
-  let jobSql =
-  `CREATE TABLE IF NOT EXISTS userjob (savedJobID VARCHAR(10) AUTO_INCREMENT PRIMARY KEY, username VARCHAR(255), jobName VARCHAR(100))`;
-  result = await queryDB(jobSql);
-
-  let savedJobID = result.length >= 0 ? JSON.parse(result[0].savedJobID) : [];
-  
-  if(!Array.isArray(savedJobID)) {
-    savedJobID = [];
-  }
-  
-  if(!savedJobID.includes(jobID)) {
-    
-    savedJobID.push(jobID)
-    
-    if(savedJobID = 0){
-      const insertSql = `INSERT INTO userjob (savedJobID, username, jobName) VALUES ("${req.body.job_id}", "${req.body.username}", "${req.body.jobName}")`;
-      await queryDB(insertSql);
-    }
-    else{
-      alert("You can only save one job.");
-    }
-  }
-
-  return res.redirect("Your_job.html");
-})
-
 //ทำให้สมบูรณ์
 app.post("/profilepic", async (req, res) => {
     let upload = multer({ storage: storage, fileFilter: imageFilter }).single(
@@ -178,6 +150,30 @@ app.post("/checkLogin", async (req, res) => {
     return res.redirect("login.html?error=1");
   }
 
+  });
+
+  app.post("/saveJob", async (req, res) => {
+    const username = req.cookies.username;
+    const savedJobID = req.body.jobId; // Assuming the job ID is sent in the request body
+  
+    // Retrieve the existing saved job IDs for the user
+    const getSavedJobQuery = `SELECT savedJobIDs FROM savedjob WHERE username = '${username}'`;
+    const getResult = await queryDB(getSavedJobQuery);
+  
+    if (getResult.length === 0) {
+      // If the user has no saved jobs, create a new row
+      const insertSavedJobQuery = `INSERT INTO savedjob (username, savedJobIDs) VALUES ('${username}', '${savedJobID}')`;
+      await queryDB(insertSavedJobQuery);
+    } else {
+      // If the user already has saved jobs, update the existing row
+      const existingSavedJobIDs = getResult[0].savedJobIDs;
+      const updatedSavedJobIDs = existingSavedJobIDs ? `${existingSavedJobIDs},${savedJobID}` : savedJobID;
+  
+      const updateSavedJobQuery = `UPDATE savedjob SET savedJobIDs = '${updatedSavedJobIDs}' WHERE username = '${username}'`;
+      await queryDB(updateSavedJobQuery);
+    }
+  
+    res.status(200).send("Job saved successfully");
   });
   
   app.listen(port, hostname, () => {

@@ -232,7 +232,8 @@
   #container{
 	  
 	  padding-top: 100px;
-	  padding-right: 30px;
+	  padding-right: 300px;
+	  text-align: center;
 	  float: right;
   
   }
@@ -263,9 +264,9 @@
   }
   
   #LoginIcon{
-  
+	
 	  font-size: 72px;
-  
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
   
   .form{
