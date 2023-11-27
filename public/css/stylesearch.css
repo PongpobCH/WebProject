@@ -5,13 +5,15 @@
 }
 header{
     padding: 1rem;
-    background-color: rgb(188, 188, 188);
+    background-color: #fa8541;
     display: flex;
     justify-content: space-between;
 }
 .logo a{
     font-size: 2rem;
     text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
 }
 .menu{
     display: flex;
@@ -23,6 +25,12 @@ header{
 }
 .menu li a{
     text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+}
+
+body {
+    background-color: #141414;
 }
 
 .seach_bar{
@@ -34,11 +42,11 @@ header{
 }
 
 .containner{
-   
     padding: 20px;
 }
 .containner form{
     width: 300px;
+    
     border: 1px solid black;
     border-radius: 4px;
     display: flex;
@@ -83,7 +91,9 @@ header{
     padding: 5px;
     width:600px;
     border: 2px solid black;
+    background-color: white;
     height: 200px;
     margin: 1%;
     text-align: justify;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }

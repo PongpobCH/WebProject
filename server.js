@@ -68,7 +68,28 @@ app.post("/regisDB", async (req, res) => {
     result = await queryDB(sql);
     return res.redirect("login.html");
   });
+
+app.post("/applyJob", async (req, res) => {
   
+  let sql =
+  `CREATE TABLE IF NOT EXISTS userjob (id VARCHAR(10) AUTO_INCREMENT PRIMARY KEY, jobName VARCHAR(100), image VARCHAR(100), contractor VARCHAR(100), earth VARCHAR(100), pay VARCHAR(100), details VARCHAR(200), moreDetails VARCHAR(500))`;
+  result = await queryDB(sql);
+  
+  const checkUsernameSQL = `SELECT savedJobID FROM WHERE username = '${req.body.username}'`;
+  const result = await queryDB(sql);
+  let savedJobID = result.length > 0 ? JSON.parse(result[0].savedJobID) : [];
+  
+  if(!Array.isArray(savedJobID)) {
+    savedJobID = [];
+  }
+  
+  sql = `INSERT INTO userjob (job_id, jobName, image, contractor, earth, pay, details, moreDetails) VALUES ("${req.body.job_id}", "${req.body.jobName}", "", "${req.body.contractor}", "${req.body.earth}", "${req.body.pay}", "${req.body.details}", "${req.body.moreDetails}")`
+  result = await queryDB(sql);
+
+
+  //return res.redirect("searchjob.html");
+})
+
 //ทำให้สมบูรณ์
 app.post("/profilepic", async (req, res) => {
     let upload = multer({ storage: storage, fileFilter: imageFilter }).single(
