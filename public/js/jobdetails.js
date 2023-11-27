@@ -31,6 +31,7 @@ function showJobDetails(jobDetails) {
         jobDetailsContainer.appendChild(detailElement);
     }
 }
+
 // Add this code to your jobdetails.js file
 function saveJob() {
     const jobId = getJobIdFromUrl();
