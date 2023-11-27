@@ -140,10 +140,11 @@ hr {
  } 
  
  .newsfeed{
-     float: right;
+
+     float: left;
      display: flex;
      width: 100%;
-     text-align: right;
+     text-align: left;
      font-size: 20px;
      margin-top: 15px;
  }
