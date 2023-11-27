@@ -41,19 +41,19 @@ body {
     justify-content: center ;
 }
 
-.containner{
-    padding: 20px;
+.container{
+    padding-top: 50px;
+    padding-left: 35%;
 }
-.containner form{
+.container form{
     width: 300px;
-    
     border: 1px solid black;
     border-radius: 4px;
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-.containner form input{
+.container form input{
     border: none;
     outline: none;
     box-shadow: none;
@@ -68,6 +68,16 @@ body {
     border: 1px red;
     border-radius: 4px;
 }
+
+#searchbutton{
+    font-size: 34px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-left: 20px;
+    padding-right: 20px;
+    color:white;
+    background-color: #fa8541;
+    border: none;
+} 
 
 #panel-job{
 	width: 100%;
@@ -88,7 +98,8 @@ body {
 }
 
 #layer div{
-    padding: 5px;
+    border-radius: 25px;
+    padding: 10px;
     width:600px;
     border: 2px solid black;
     background-color: white;
