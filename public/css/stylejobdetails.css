@@ -75,16 +75,17 @@ body {
 }
 
 #container-job{
-	width:100%;
-	display: flex;
-	justify-content: center;
+	width:100%; 
+	display: flex; 
+	justify-content: left;  
 }
 
 #layer{
+
 	display: flex;
 	width:70%;
 	flex-wrap: wrap;
-	justify-content: center;
+	/* justify-content: center;  */
 }
 
 #layer div{
@@ -99,4 +100,71 @@ body {
 }
 #feed-container{
     color: aqua;
+}
+
+#posting{
+
+    margin-top: 15px;
+    text-align: right;
+    padding-right: 3%;
+    width:50%;
+    
+}
+
+textarea{
+
+    float: center;
+    width: 90%;
+    min-width: 200px;
+    height: 100px;
+    margin-right: 0px;
+    text-align: right;
+    font-size: 20px;
+
+}
+
+#postbutton{
+    width:20%;
+    min-width: 100px;
+    font-size: 20px;
+}
+
+hr {
+     display: block;
+     height: 1px;
+     border: 0;
+     border-top: 10px solid #4cad4b;
+     border-radius: 10px;
+     margin: 15px 10px;
+     padding: 0; 
+ } 
+ 
+ .newsfeed{
+     float: right;
+     display: flex;
+     width: 100%;
+     text-align: right;
+     font-size: 20px;
+     margin-top: 15px;
+ }
+ 
+ .postmsg{
+
+     border-radius: 20px;
+     width: 50%;
+     background-color: rgb(233, 78, 78);
+     margin-left: 15px;
+ 
+     height: 100px;
+     text-align: center;
+     line-height: 100px;
+     min-width: 200px;
+ }
+
+ .postuser {
+    height: 100px;
+    width:50%;
+    text-align: center;
+    line-height: 100px;
+    min-width: 200px;
 }

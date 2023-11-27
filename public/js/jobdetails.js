@@ -58,12 +58,7 @@ function saveJob() {
   
 // Initial page load
 window.onload = function () {
-    var jobId = getJobIdFromUrl();
-    if (jobId) {
-        fetchJobDetails(jobId, showJobDetails);
-    } else {
-        console.error("Job ID not found in the URL");
-    }
+    
 };
 
 
@@ -95,6 +90,14 @@ function checkCookie() {
   }
   
   function pageLoad() {
+
+    var jobId = getJobIdFromUrl();
+    if (jobId) {
+        fetchJobDetails(jobId, showJobDetails);
+    } else {
+        console.error("Job ID not found in the URL");
+    }
+
 	document.getElementById("postbutton").onclick = getData;
   
 	document.getElementById("displayPic").onclick = fileUpload;
@@ -154,7 +157,8 @@ function checkCookie() {
   
   // complete it
   async function writePost(msg) {
-	let response = await fetch("/writePost", {
+	
+    let response = await fetch("/writePost", {
 	  method: "POST",
 	  headers: {
 		Accept: "application/json",
@@ -184,8 +188,9 @@ function checkCookie() {
 	  var temp1 = document.createElement("div");
 	  temp1.className = "postuser";
   
-	  temp1.innerHTML = "Posted by: " + data[keys[i]]["username"];
-	  temp.appendChild(temp1);
+      temp.appendChild(temp1);
+	  temp1.innerHTML = "Posted by: " + data[keys[i]]["username"]; 
+	  
 	}
   }
 
