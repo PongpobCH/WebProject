@@ -31,7 +31,31 @@ function showJobDetails(jobDetails) {
         jobDetailsContainer.appendChild(detailElement);
     }
 }
-
+// Add this code to your jobdetails.js file
+function saveJob() {
+    const jobId = getJobIdFromUrl();
+    const saveJobUrl = "/saveJob";
+  
+    // Assuming you are using fetch API for making AJAX requests
+    fetch(saveJobUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ jobId: jobId }),
+    })
+      .then((response) => {
+        if (response.ok) {
+          console.log("Job saved successfully");
+        } else {
+          console.error("Failed to save job");
+        }
+      })
+      .catch((error) => {
+        console.error("Error during the fetch request", error);
+      });
+  }
+  
 // Initial page load
 window.onload = function () {
     var jobId = getJobIdFromUrl();
@@ -41,6 +65,3 @@ window.onload = function () {
         console.error("Job ID not found in the URL");
     }
 };
-
-
-
