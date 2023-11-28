@@ -64,15 +64,6 @@ function checkCookie() {
 	}
   }
 
-  function showResume(filename) {
-	if (filename !== "") {
-	  var showresume = document.getElementById("resumePic");
-	  showresume.innerHTML = "";
-	  var temp = document.createElement("resume");
-	  temp.src = filename;
-	  showpic.appendChild(temp);
-	}
-  }
   
   // complete it
   async function readPost() {

@@ -138,16 +138,6 @@ function checkCookie() {
 	  showpic.appendChild(temp);
 	}
   }
-
-  function showResume(filename) {
-	if (filename !== "") {
-	  var showresume = document.getElementById("resumePic");
-	  showresume.innerHTML = "";
-	  var temp = document.createElement("resume");
-	  temp.src = filename;
-	  showpic.appendChild(temp);
-	}
-  }
   
   // complete it
   async function readPost() {
@@ -193,15 +183,4 @@ function checkCookie() {
 	  temp1.innerHTML = "Posted by: " + data[keys[i]]["username"]; 
 	  
 	}
-  }
-
-  
-  function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
-  }
-  
-  function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft = "0";
   }

@@ -153,6 +153,9 @@ app.post("/checkLogin", async (req, res) => {
   });
 
   app.post("/saveJob", async (req, res) => {
+    let sql = "CREATE TABLE IF NOT EXISTS savedjob (id INT AUTO_INCREMENT PRIMARY KEY, username VARCHAR(255),savedJobIDs TEXT)";
+    let result = await queryDB(sql);
+    
     const username = req.cookies.username;
     const savedJobID = req.body.jobId; // Assuming the job ID is sent in the request body
   
